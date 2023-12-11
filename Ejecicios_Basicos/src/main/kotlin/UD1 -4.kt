@@ -6,11 +6,13 @@ fun Fahrenheit(): Float {
 
 }
 
-fun main(){
+fun main() {
     try {
         val resultado = Fahrenheit()
         println("La temperatura en Fahrenheir es $resultado")
+    } catch (e: NumberFormatException) {
+        println("**ERROR** $e")
+    } catch (e: Exception) {
+        print("**ERROR** $e")
     }
-    catch (e:)
-
 }
