@@ -5,7 +5,6 @@ fun Fahrenheit(): Float {
     return (fahrenheit)
 
 }
-
 fun main() {
     try {
         val resultado = Fahrenheit()
