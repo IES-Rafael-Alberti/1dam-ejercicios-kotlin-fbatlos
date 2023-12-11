@@ -1,9 +1,18 @@
+import kotlin.math.ceil
+
 fun pedirnumero(): Float {
     val num = readln().toFloat()
     return num
 }
 
 fun ej12(){
+    try {
+        println("Dime un tu peso en Kg:")
+        val peso = pedirnumero()
+        println("Dime un tu altura en M:")
+        val altura =pedirnumero()
+        println("Tu indice de masa corporal es ${ceil(peso/(altura*altura))}")
+    }
 
 }
 
@@ -17,7 +26,7 @@ fun ej6(){
     try {
         println("Dime el precio final:")
         val precio = pedirnumero()
-        val iva = precio*1.10
+        val iva = precio*0.10
         val siniva = precio - iva
         println("Importe del IVA $iva")
         println("Importe sin IVA $siniva")
