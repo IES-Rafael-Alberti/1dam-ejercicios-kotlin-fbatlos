@@ -5,6 +5,18 @@ fun pedirnumero(): Float {
     val num = readln().toFloat()
     return num
 }
+
+
+
+
+
+
+
+/**
+ * Esta función ej 18 preguntará al usuario su nombre , lo lee y lo muentra
+ * all en mayusculas , tod en minuscula y muestra el nombre con all la primera
+ * letra a all el nombre completo.
+ */
 fun ej18(){
     println("Dame tu nombre :")
     val nombre_completo = readln()
@@ -13,9 +25,6 @@ fun ej18(){
     val nombre= nombre_completo.split(" ").joinToString(" ").replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
     println(nombre)
 }
-
-
-
 
 /**
  * La funcion ej15 pedirá tu capital , que llamará a la funcion pedirnumero y esta
@@ -38,8 +47,6 @@ catch (e: NumberFormatException) {
 } catch (e: Exception) {
     print("**ERROR** $e")
 }
-
-
 
 /**
  * La funcion ej12 llamará a pedirnumero dos veces para saber su peso y su altura ,
