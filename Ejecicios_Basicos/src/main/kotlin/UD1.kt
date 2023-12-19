@@ -83,8 +83,6 @@ fun ej18(){
             println("Dame tu nombre :")
             val nombre_completo = readln()
             nombre_completo.toDouble()
-
-        }catch (e: NumberFormatException) {
             println(nombre_completo.uppercase())
             println(nombre_completo.lowercase())
             val nombre = nombre_completo.split(" ").joinToString(" ")
