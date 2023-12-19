@@ -7,5 +7,12 @@ fun main() {
     //ej21()
     //ej22()
     //ej24()
-    ej2U2()
+
+    //ej2U2()
+    //ej3U2()
+}
+fun limpiaConsola() {
+for (i in 1..10) {
+ println()
+ }
 }
