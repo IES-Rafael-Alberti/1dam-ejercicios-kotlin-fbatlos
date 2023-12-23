@@ -6,7 +6,15 @@ fun pedirnumero(): Float {
     val num = readln().toFloat()
     return num
 }
-
+fun ej25(){
+    print("Dime tu fecha de nacimiento en formato dd/mm/aaaa : ")
+    val fecha = readln()
+    fecha.split("/")
+    print("Dia : ${fecha[0]}\n Mes : ${fecha[1]}\n Año : ${fecha[2]}")
+}
+/*
+*
+*/
 fun ej24() {
     print("Dime cuanto vale en € (usa . para los centimos): ")
     val dinero = readln()
