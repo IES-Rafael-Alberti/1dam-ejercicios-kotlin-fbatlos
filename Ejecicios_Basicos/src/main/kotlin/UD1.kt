@@ -7,10 +7,24 @@ fun pedirnumero(): Float {
     return num
 }
 fun ej25(){
-    print("Dime tu fecha de nacimiento en formato dd/mm/aaaa : ")
-    val fecha = readln()
-    fecha.split("/")
-    print("Dia : ${fecha[0]}\n Mes : ${fecha[1]}\n Año : ${fecha[2]}")
+    try{
+        print("Dime tu fecha de nacimiento en formato dd/mm/aaaa : ")
+        val fecha = readln()
+        val fechas = fecha.split("/").toMutableList()
+        if (fechas[1].toInt() >= 12){
+            error(" ")
+        }
+        if (fechas[0].toInt() >= 31){
+            error(" ")
+        }
+        if (fechas[1].toInt() == 2 && fechas[0].toInt() >= 21){
+            error(" ")
+        }
+        print("Dia : ${fechas[0].toInt()}\n Mes : ${fechas[1].toInt()}\n Año : ${fechas[2].toInt()}")
+    }catch (_:Exception){
+        println("Dato no valido")
+    }
+
 }
 /*
 *
