@@ -213,5 +213,85 @@ fun ej8I2(){
     }
 }
 
+fun ej13I2() {
+    fun pregunta(): Boolean {
+        val pregunta = readln()
+        if (pregunta == "si" || pregunta=="s" ){
+            return true
+        }else{
+            return false
+        }
+    }
+    try {
+        do {
+            print("Dime algo para que tenga eco : ")
+            val eco = readln()
+            println("$eco   $eco  $eco")
+            println("Quieres decir otra palabra ? s o si ")
+            val pregunta = pregunta()
+        } while (pregunta)
 
+    } catch (_: Exception) {
+        println("ERROR")
+    }
 
+}
+
+fun ej15I2(){
+    try {
+        var resultado = 0
+        println("Ingrese numeros")
+        var cont = 1
+        do {
+            print("$cont º => ")
+            val numero = readln().toInt()
+            resultado += numero
+            ++cont
+        }while (numero != 0)
+        println("El sumatorio de los numeros introducidos es $resultado")
+
+    }catch (_:NumberFormatException){
+        println("ERROR")
+    }
+}
+
+fun ej19I2(){
+    try {
+        var constante = true
+        do {
+            println("1-comenzar programa\n2-imprimir listado\n3-finalizar programa")
+            val respuesta = readln().toInt()
+            when (respuesta){
+                1 -> {limpiaConsola()
+                    println("Se ha ejecutado.")}
+                2 -> {limpiaConsola()
+                    println("Se ha mandado la lista a la impresora.")}
+                3 -> {limpiaConsola()
+                    constante = false}
+                else ->{limpiaConsola()
+                    println("Numero no valido")}
+            }
+
+        }while (constante)
+
+    }catch (_:NumberFormatException){
+        println("ERROR")
+    }
+}
+
+fun ej25I2(){
+    try {
+        print("Ingresa una frase : ")
+        val frase = readln().split(" ")
+        var resultado = frase[0]
+        for (i in frase){
+            if (i.length > resultado.length){
+                resultado = i
+            }
+        }
+        println("La palabra mas larga es $resultado con ${resultado.length} letras.")
+    }catch (_:Exception){
+        limpiaConsola()
+        println("ERROR")
+    }
+}

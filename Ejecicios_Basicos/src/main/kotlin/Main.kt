@@ -15,7 +15,11 @@ fun main() {
     //ej10C2()
     //ej2I2()
     //ej4I2()
-    ej8I2()
+    //ej8I2()
+    //ej13I2()
+    //ej15I2()
+    //ej19I2()
+    ej25I2()
 }
 fun limpiaConsola() {
 for (i in 1..10) {
